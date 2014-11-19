@@ -4,6 +4,11 @@
 	<title>
 		Animations for the Web
 	</title>
+
+<style>
+
+</style>
+
 </head>
 <body>
 
@@ -14,12 +19,55 @@
 <h2>
 	Introduction
 </h2>
+<p>
+	Animations include:
+</p>
+<ul>
+<li>
+	CSS transitions
+</li>
+<li>
+	CSS animations
+</li>
+<li>
+	SVG animations
+</li>
+</ul>
 
 <hr/>
 
 <h2>
 	Examples
 </h2>
+<strong>CSS Transition</strong>
+<!-- Begin demo -->
+<div>
+<style>
+.box {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #0000FF;
+    -webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition:width 2s, height 2s, background-color 2s, transform 2s;
+}
+.box:hover {
+    background-color: #FFCCCC;
+    width:200px;
+    height:200px;
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
+</style>
+<p>The box below combines transitions for: width, height, background-color, transform. Hover over the box to see these properties animated.</p>
+<div class="box"></div>
+</div>
+<!-- End demo -->
+<p>
+	<a href="http://caniuse.com/#search=transition" target="_blank">Browser support for CSS transitions</a>
+</p>
 
 <hr/>
 
