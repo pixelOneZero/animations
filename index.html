@@ -49,12 +49,76 @@
 <h2>
 	CSS transitions
 </h2>
+<ul>
+	<li>
+		Change in a CSS property over a specified time, given a beginning and an end state.
+	</li>
+	<li>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties" target="_blank">List of animatable CSS properties</a>
+	</li>
+	<li>
+		<pre>div {transition: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;;}</pre>
+	</li>
+	<li>
+		Edge cases:
+		<ul>
+			<li>
+				Transitions involving property value "auto" are unpredicable, vary by browser, and are discouraged in the specification.
+			</li>
+			<li>
+				Transitions may skip to final state for elements added by appendChild() or that have just had their display:none removed.  Use setTimeout() with a few milliseconds to bypass this.
+			</li>
+		</ul>
+	</li>
+</ul>
+
+CSS transition example:
+<style>
+.expander {
+	width:100px;
+	height:50px;
+	background-color:#333;
+	-webkit-transition: background-color 1s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1s, width 1s cubic-bezier(0.895, 0.03, 0.685, 0.22), height 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	transition: background-color 1s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1s, width 1s cubic-bezier(0.895, 0.03, 0.685, 0.22), height 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+.expander:hover {
+	width:500px;
+	height:200px;
+	background-color:#aaa;
+}
+</style>
+<div class="expander">
+</div>
+
+<pre>
+&lt;style&gt;
+.expander {
+	width:100px;
+	height:50px;
+	background-color:#333;
+	-webkit-transition: background-color 1s, width 1s, height 1s;
+	transition: background-color 1s, width 1s, height 1s;
+}
+.expander:hover {
+	width:500px;
+	height:200px;
+	background-color:#aaa;
+}
+&lt;/style&gt;
+&lt;div class="expander"&gt;
+&lt;/div&gt;
+</pre>
 
 <hr/>
 
 <h2>
 	CSS animations
 </h2>
+<ul>
+	<li>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties" target="_blank">List of animatable CSS properties</a>
+	</li>
+</ul>
 
 <hr/>
 
@@ -164,6 +228,12 @@
 	</li>
 	<li>
 		<a href="https://twitter.com/hashtag/waapi" target="_blank">https://twitter.com/hashtag/waapi</a>
+	</li>
+	<li>
+		<a href="http://easings.net/" target="_blank">http://easings.net/</a>
+	</li>
+	<li>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function</a>
 	</li>
 	<!--
 	<li>
