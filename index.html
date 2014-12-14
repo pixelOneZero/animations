@@ -5,6 +5,7 @@
 		Animations for the Web
 	</title>
 	<link href="css/main.css" rel="stylesheet" type="text/css" />
+	<link href="css/demo.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -16,7 +17,7 @@
 	Introduction
 </h2>
 <p>
-	Implementations of web animation:
+	Approaches to web animation are primarily:
 </p>
 <ul>
 	<li>
@@ -26,7 +27,7 @@
 		CSS animations
 	</li>
 	<li>
-		SVG animations (SMIL: Snychronized Multimedia Integration Language)
+		SVG animations (SMIL: Synchronized Multimedia Integration Language)
 	</li>
 	<li>
 		Web Animation API
@@ -43,7 +44,7 @@
 			</ul>
 	</li>
 	<li>
-		JavaScript
+		JavaScript animations (native and library derived)
 	</li>
 </ul>
 
@@ -69,45 +70,43 @@
 				Transitions involving property value "auto" are unpredicable, vary by browser, and are discouraged in the specification.
 			</li>
 			<li>
-				Transitions may skip to final state for elements added by appendChild() or that have just had their display:none removed.  Use setTimeout() with a few milliseconds to bypass this.
+				Transitions may skip to final state for elements added by appendChild() or that have just had their display:none removed.  Use setTimeout() with a few milliseconds to work around this.
 			</li>
 		</ul>
 	</li>
 </ul>
 
 CSS transition example:
-<style>
-.expander {
-	width:100px;
-	height:50px;
-	background-color:#333;
-	-webkit-transition: background-color 1s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1s, width 1s cubic-bezier(0.895, 0.03, 0.685, 0.22), height 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-	transition: background-color 1s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1s, width 1s cubic-bezier(0.895, 0.03, 0.685, 0.22), height 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-}
-.expander:hover {
-	width:500px;
-	height:200px;
-	background-color:#aaa;
-}
-</style>
+
 <div class="expander">
 </div>
 
 <pre>
 &lt;style&gt;
-.expander {
-	width:100px;
+ .expander {
+	width:50px;
 	height:50px;
-	background-color:#333;
-	-webkit-transition: background-color 1s, width 1s, height 1s;
-	transition: background-color 1s, width 1s, height 1s;
+	background-color:#fa3;
+	border-radius:0;
+	-webkit-transition: 
+		background-color 3s, 
+		width 3s, 
+		height 3s,
+		border-radius 3s;
+	transition: 
+		background-color 3s, 
+		width 3s, 
+		height 3s,
+		border-radius 3s;
 }
 .expander:hover {
-	width:500px;
-	height:200px;
-	background-color:#aaa;
+	width:300px;
+	height:300px;
+	background-color:#39f;
+	border-radius: 150px;
 }
 &lt;/style&gt;
+
 &lt;div class="expander"&gt;
 &lt;/div&gt;
 </pre>

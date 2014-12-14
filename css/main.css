@@ -18,3 +18,11 @@ hr {
 	border-top:1px dashed #aaa;
 	margin:3em 0 2em 0;
 }
+
+pre {
+	border:1px dashed #777;
+	background:#333;
+	color:#fff;
+	font-family: Courier;
+	padding:1em;
+}

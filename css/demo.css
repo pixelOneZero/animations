@@ -1,0 +1,22 @@
+ .expander {
+	width:50px;
+	height:50px;
+	background-color:#fa3;
+	border-radius:0;
+	-webkit-transition: 
+		background-color 3s, 
+		width 3s, 
+		height 3s,
+		border-radius 3s;
+	transition: 
+		background-color 3s, 
+		width 3s, 
+		height 3s,
+		border-radius 3s;
+}
+.expander:hover {
+	width:300px;
+	height:300px;
+	background-color:#39f;
+	border-radius: 150px;
+}
