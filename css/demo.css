@@ -20,3 +20,56 @@
 	background-color:#39f;
 	border-radius: 150px;
 }
+
+
+
+/* styles for nav icon */
+body {
+	padding:0;
+	margin:0;
+	font-size:.75em;
+}
+
+#navigation {
+	background:#fff;
+	display:inline-block;
+	width:20em;
+	position: absolute;
+	left:-17.5em;
+	transition:.3s;
+}
+
+#navigation ul {
+	list-style-type: none;
+	margin:2.5em 0 2.5em 0;
+}
+
+#navigation ul li {
+	margin: 1em 0 1em 0;
+}
+
+#navigation:hover {
+	left:0;
+	background:#eee;
+}
+
+#icon-container {
+	cursor:pointer;
+	padding:5px;
+	display:inline-block;
+	float:right;
+}
+
+#icon-container div.nav-icon {
+	width:20px;
+	height:3px;
+	background:#000;
+	cursor: pointer;
+}
+
+#icon-container div.nav-icon:nth-child(2) {
+	margin:3px 0 3px 0;
+}
+
+
+
