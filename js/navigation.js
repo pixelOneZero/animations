@@ -4,7 +4,7 @@ var poz = {
 		var iconLines = document.getElementsByClassName("nav-icon");
 		container.addEventListener("click", function() {
 			for (var a=0; a <iconLines.length; a++) {
-				iconLines[a].classList.add("open");
+				iconLines[a].classList.add("close");
 			}
 			container.classList.add("open");
 		});	

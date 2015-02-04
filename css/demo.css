@@ -28,36 +28,19 @@ body {
 	padding:0;
 	margin:0;
 	font-size:.75em;
+	text-align:center;
 }
 
 #navigation {
-	background:#fff;
-	display:inline-block;
-	width:20em;
-	position: absolute;
-	left:-17.5em;
-	transition:.3s;
-}
-
-#navigation ul {
-	list-style-type: none;
-	margin:2.5em 0 2.5em 0;
-}
-
-#navigation ul li {
-	margin: 1em 0 1em 0;
-}
-
-#navigation:hover {
-	left:0;
-	background:#eee;
+	cursor:pointer;
 }
 
 #icon-container {
 	cursor:pointer;
 	padding:5px;
 	display:inline-block;
-	float:right;
+	margin:4em auto 0 auto;
+	position:relative;
 }
 
 #icon-container div.nav-icon {
@@ -65,10 +48,110 @@ body {
 	height:3px;
 	background:#000;
 	cursor: pointer;
+	position:absolute;
 }
 
-#icon-container div.nav-icon:nth-child(2) {
-	margin:3px 0 3px 0;
+#icon-container div.nav-icon.top {
+	top:0;
+}
+
+#icon-container div.nav-icon.middle {
+	top:6px;
+}
+
+#icon-container div.nav-icon.bottom {
+	top:12px;
+}
+
+/* animation styles */
+
+#icon-container div.nav-icon.top.close {
+	-webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-name: morphTop;
+  animation-name: morphTop;
+}
+
+#icon-container div.nav-icon.middle.close {
+	-webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-name: morphMiddle;
+  animation-name: morphMiddle;
+}
+
+#icon-container div.nav-icon.bottom.close {
+	-webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-name: morphBottom;
+  animation-name: morphBottom;
+}
+
+@keyframes morphTop {
+  from {
+    top:0;
+    transform: rotate(0deg);
+  }
+
+  to {
+    top:6px;
+    transform: rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes morphTop {
+  from {
+    top:0;
+    transform: rotate(0deg);
+  }
+
+  to {
+    top:6px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes morphMiddle {
+  from {
+    opacity:1;
+  }
+
+  to {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes morphMiddle {
+  from {
+    opacity:1;
+  }
+
+  to {
+    opacity:0;
+  }
+}
+
+@keyframes morphBottom {
+  from {
+    top:12px;
+    transform: rotate(0deg);
+  }
+
+  to {
+    top:6px;
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes morphBottom {
+  from {
+    top:12px;
+    transform: rotate(0deg);
+  }
+
+  to {
+    top:6px;
+    transform: rotate(45deg);
+  }
 }
 
 
