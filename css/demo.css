@@ -70,6 +70,8 @@ body {
   animation-duration: .3s;
   -webkit-animation-name: morphTop;
   animation-name: morphTop;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 #icon-container div.nav-icon.middle.close {
@@ -77,6 +79,8 @@ body {
   animation-duration: .3s;
   -webkit-animation-name: morphMiddle;
   animation-name: morphMiddle;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 #icon-container div.nav-icon.bottom.close {
@@ -84,6 +88,8 @@ body {
   animation-duration: .3s;
   -webkit-animation-name: morphBottom;
   animation-name: morphBottom;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 @keyframes morphTop {
